@@ -1,0 +1,54 @@
+
+use('etl_products');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+db.TVs.drop();
+db.Smartphones.drop();
+db.Laptops.drop();
+db.Tablets.drop();
+db.VideoGames.drop();
+db.Cameras.drop();
+db.Printers.drop();
+db.Wearables.drop();
+
+// Insert a few documents into the collection.
+db.TVs.insertMany([
+  { 'productID': "tv1", 'description': 'TCL 65P635 LED 4K' },
+  { 'productID': "tv2", 'description': 'LG 42C24LA OLED 4K' },
+], { forceServerObjectId: true });
+
+db.Smartphones.insertMany([
+  { 'productID': "sp1", 'description': 'Google Pixel 6a' },
+  { 'productID': "sp2", 'description': 'Apple iPhone 11' },
+], { forceServerObjectId: true });
+
+db.Tablets.insertMany([
+  { 'productID': "tb1", 'description': 'HUAWEI Tab MatePad T10s' },
+  { 'productID': "tb2", 'description': 'SAMSUNG Galaxy Tab Α7 Lite' },
+], { forceServerObjectId: true });
+
+db.VideoGames.insertMany([
+  { 'productID': "vg1", 'description': 'Death Stranding - PS4' },
+  { 'productID': "vg2", 'description': 'Days Gone - PS4' },
+], { forceServerObjectId: true });
+
+db.Cameras.insertMany([
+  { 'productID': "cam1", 'description': 'Canon EOS R7' },
+  { 'productID': "cam2", 'description': 'GoPro Hero11 Black' },
+], { forceServerObjectId: true });
+
+db.Printers.insertMany([
+  { 'productID': "pr1", 'description': 'HP DeskJet 2720e' },
+  { 'productID': "pr2", 'description': 'Canon Pixma TS3150' },
+], { forceServerObjectId: true });
+
+db.Laptops.insertMany([
+  { 'productID': "ltp1", 'description': 'Apple MacBook Air (M2)' },
+  { 'productID': "ltp2", 'description': 'HP Spectre x360 14' },
+], { forceServerObjectId: true });
+
+db.Wearables.insertMany([
+  { 'productID': "wr1", 'description': 'AMAZFIT GTR 2e' },
+  { 'productID': "wr2", 'description': 'HUAWEI Watch GT 2 46mm' },
+], { forceServerObjectId: true });
